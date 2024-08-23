@@ -1,0 +1,230 @@
+@import url('https://fonts.googleapis.com/css2?family=Readex+Pro:wght@300;400;500;600;700&display=swap');
+
+:root {
+    --mainTextColor-light: #000;
+    --secondaryTextColor-light: rgb(51 51 51);
+    --mainLinkColor-light: #0da2b8;
+    --mainBorderColor-light: rgb(218, 218, 218);
+    --mainBgColor-light: rgb(249, 250, 251);
+
+    --mainTextColor-dark: #fff;
+    --secondaryTextColor-dark: #adb0b1;
+    --mainLinkColor-dark: rgb(30, 190, 214);
+    --mainBorderColor-dark: #2b3031;
+    --mainBgColor-dark: #131415;
+
+    --mainTextColor: var(--mainTextColor-dark);
+    --secondaryTextColor: var(--secondaryTextColor-dark);
+    --mainLinkColor: var(--mainLinkColor-dark);
+    --mainBorderColor: var(--mainBorderColor-dark);
+    --mainBgColor: var(--mainBgColor-dark);
+}
+
+* {
+    font-family: 'Readex Pro', sans-serif;
+    line-height: 1.6em;
+    box-sizing: border-box;
+    color: var(--mainTextColor);
+    transition: color 0.3s ease, background-color 0.3s ease;
+}
+
+body {
+    background-color: var(--mainBgColor);
+    margin: 0;
+    padding: 0;
+    transition: background-color 0.3s ease;
+}
+
+p, span, li {
+    color: var(--secondaryTextColor);
+    font-size: 1em;
+    line-height: 1.7em;
+}
+
+a {
+    text-decoration: none;
+    color: var(--mainLinkColor);
+    font-weight: 500;
+}
+
+li {
+    line-height: 1.9em;
+}
+
+#container--main {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 1.5em;
+    background-color: var(--mainBgColor);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+.section--page {
+    padding: 1.5em 0;
+}
+
+#wrapper--hero {
+    display: flex;
+    align-items: center;
+    gap: 3em;
+    margin-bottom: 2em;
+    background-color: rgba(255, 255, 255, 0.05);
+    padding: 1.5em;
+    border-radius: 10px;
+}
+
+#bio, a {
+    font-weight: 300;
+    color: var(--secondaryTextColor);
+}
+
+#user-name {
+    font-size: 2.5em;
+    line-height: 1.2em;
+    margin: 0;
+    color: var(--mainTextColor);
+}
+
+#profile-pic {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 2px solid var(--mainLinkColor);
+    transition: transform 0.3s ease;
+}
+
+#profile-pic:hover {
+    transform: scale(1.05);
+}
+
+#email {
+    color: var(--mainTextColor);
+    font-weight: 500;
+    margin-top: 1em;
+}
+
+#socials--list {
+    display: flex;
+    justify-content: space-between;
+    column-gap: 1em;
+    flex-wrap: wrap;
+    margin-bottom: 1.5em;
+}
+
+#socials--list a {
+    font-weight: 300;
+    color: var(--secondaryTextColor);
+    font-size: 0.9em;
+    padding: 0.5em 1em;
+    border: 1px solid var(--mainBorderColor);
+    border-radius: 5px;
+    transition: 0.3s ease;
+}
+
+#socials--list a:hover {
+    background-color: var(--mainLinkColor);
+    color: #fff;
+    font-weight: 400;
+}
+
+#qualifications--list {
+    list-style: none;
+    padding-left: 1em;
+}
+
+#wrapper--techstack__items {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1em;
+    font-size: 0.9em;
+}
+
+.card--techstack {
+    border: 1px solid var(--mainBorderColor);
+    border-radius: 5px;
+    padding: 0.5em 1em;
+    align-items: center;
+    background-color: rgba(255, 255, 255, 0.05);
+    transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+.card--techstack:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+    border-color: var(--mainLinkColor);
+}
+
+.card--project {
+    padding-top: 1em;
+    padding-bottom: 1em;
+    border-top: 1px solid var(--mainBorderColor);
+    margin-bottom: 1.5em;
+}
+
+.card--project a {
+    color: var(--mainTextColor);
+    transition: color 0.3s ease;
+    font-weight: 500;
+}
+
+.card--project a:hover {
+    color: rgb(30, 190, 214);
+}
+
+.card--work-history {
+    border-left: 3px solid var(--mainLinkColor);
+    margin-top: 3em;
+    margin-bottom: 3em;
+    padding-left: 2em;
+    background-color: rgba(255, 255, 255, 0.05);
+    padding: 1em;
+    border-radius: 8px;
+}
+
+.line-break {
+    background-color: var(--mainBorderColor);
+    height: 1px;
+    margin: 2em 0;
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+
+    .section--page {
+        padding-top: 1em;
+        padding-bottom: 1em;
+    }
+
+    #wrapper--hero {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    #profile-pic {
+        width: 150px;
+        height: 150px;
+    }
+
+    #user-name {
+        font-size: 2em;
+    }
+
+    #socials--list {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #socials--list a {
+        width: 100%;
+        text-align: center;
+        margin-bottom: 0.5em;
+    }
+
+    .card--work-history {
+        border-left: none;
+        padding-left: 0;
+        text-align: center;
+    }
+}
